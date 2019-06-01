@@ -5,8 +5,8 @@ import java.util.Random;
 public class TastyEgg {
 	public static void main(String[] args) {
 		KinderSurprise myKinderSurprise = new KinderSurprise(new Egg(new Toy()));
-		// Your mission: Find out what toy is inside your KinderSurprise.
-		
+
+		System.out.println(myKinderSurprise.getKinderSurpriseContents().getEggContents().getToyName());
 
 	}
 }
@@ -19,9 +19,9 @@ class KinderSurprise {
 	}
 
 	Egg getKinderSurpriseContents() {
-		// ADD CODE HERE
-		
-		return null;
+		egg.getEggContents();
+
+		return egg;
 	}
 }
 
@@ -34,16 +34,16 @@ class Egg {
 	}
 
 	Toy getEggContents() {
-		// ADD CODE HERE
-		
-		return null;
+		toy.getToyName();
+
+		return toy;
 	}
 
 }
 
 class Toy {
 	String getToyName() {
-		int randomToySelector = new Random().nextInt(2);
+		int randomToySelector = new Random().nextInt(3);
 		if (randomToySelector == 0)
 			return "tamagotchi";
 		else if (randomToySelector == 1)
